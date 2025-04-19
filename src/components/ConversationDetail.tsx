@@ -205,7 +205,7 @@ const ConversationDetail = () => {
 
     // Replace placeholders with actual values
     if (contact) {
-      content = content.replace(/{{name}}/g, contact.name)
+      content = content.replace(/{{contactName}}/g, contact.name)
       content = content.replace(/{{phone}}/g, contact.phone_number)
     }
 

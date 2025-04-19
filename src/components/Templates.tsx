@@ -30,7 +30,7 @@ const Templates = () => {
     {
       id: "1",
       name: "Welcome Message",
-      content: "Hello {{name}}, thank you for reaching out! How can I assist you today?",
+      content: "Hello {{contactName}}, thank you for reaching out! How can I assist you today?",
       category: "greeting",
     },
     {
@@ -42,7 +42,8 @@ const Templates = () => {
     {
       id: "3",
       name: "Follow-up",
-      content: "Hello {{name}}, I wanted to follow up on our previous conversation. Do you have any other questions?",
+      content:
+        "Hello {{contactName}}, I wanted to follow up on our previous conversation. Do you have any other questions?",
       category: "follow-up",
     },
   ])
@@ -171,7 +172,7 @@ const Templates = () => {
                 <textarea
                   id="template-content"
                   className="min-h-[100px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                  placeholder="Hello {{name}}, thank you for reaching out!"
+                  placeholder="Hello {{contactName}}, thank you for reaching out!"
                   value={editingTemplate ? editingTemplate.content : newTemplate.content}
                   onChange={(e) =>
                     editingTemplate
@@ -179,7 +180,7 @@ const Templates = () => {
                       : setNewTemplate({ ...newTemplate, content: e.target.value })
                   }
                 />
-                <p className="text-xs text-muted-foreground">Use {{ name }} to insert the contact's name.</p>
+                <p className="text-xs text-muted-foreground">Use {{ contactName }} to insert the contact's name.</p>
               </div>
             </div>
             <DialogFooter>

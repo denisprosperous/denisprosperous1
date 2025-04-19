@@ -269,32 +269,27 @@ export const mockTemplates = [
   {
     id: "1",
     name: "Welcome Message",
-    content: "Hello {{name}}, thank you for reaching out! How can I assist you today?",
+    content: "Hello {{contactName}}, thank you for reaching out to us!",
     category: "greeting",
   },
   {
     id: "2",
-    name: "Business Hours",
-    content: "Our business hours are Monday to Friday, 9 AM to 5 PM. We are closed on weekends and holidays.",
-    category: "info",
-  },
-  {
-    id: "3",
     name: "Follow-up",
-    content: "Hello {{name}}, I wanted to follow up on our previous conversation. Do you have any other questions?",
+    content: "Hi {{contactName}}, just checking in to see if you have any questions about our services.",
     category: "follow-up",
   },
   {
-    id: "4",
-    name: "Product Inquiry",
-    content: "Thank you for your interest in our products. I'd be happy to provide more information about {{product}}.",
-    category: "sales",
+    id: "3",
+    name: "Business Hours",
+    content: "Our business hours are Monday to Friday, 9am to 5pm. We'll get back to you during business hours.",
+    category: "info",
   },
   {
-    id: "5",
-    name: "Appointment Confirmation",
-    content: "Your appointment has been confirmed for {{date}} at {{time}}. We look forward to seeing you!",
-    category: "appointment",
+    id: "4",
+    name: "Out of Office",
+    content:
+      "I'm currently out of the office and will return on {{returnDate}}. For urgent matters, please contact {{alternateContact}}.",
+    category: "other",
   },
 ]
 

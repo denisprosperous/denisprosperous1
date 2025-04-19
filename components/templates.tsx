@@ -156,7 +156,7 @@ export function Templates() {
                 <textarea
                   id="template-content"
                   className="min-h-[100px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                  placeholder="Hello {{name}}, thank you for reaching out!"
+                  placeholder="Hello {{contactName}}, thank you for reaching out!"
                   value={editingTemplate ? editingTemplate.content : newTemplate.content}
                   onChange={(e) =>
                     editingTemplate
@@ -164,7 +164,7 @@ export function Templates() {
                       : setNewTemplate({ ...newTemplate, content: e.target.value })
                   }
                 />
-                <p className="text-xs text-muted-foreground">Use {{ name }} to insert the contact's name.</p>
+                <p className="text-xs text-muted-foreground">Use {{ contactName }} to insert the contact's name.</p>
               </div>
             </div>
             <DialogFooter>
@@ -231,19 +231,8 @@ export function Templates() {
                 <CardContent className="p-6">
                   <div className="flex flex-col items-center justify-center py-8 gap-2">
                     <FileText className="h-10 w-10 text-muted-foreground" />
-                    <h3 className="font-medium">No templates found</h3>
-                    <p className="text-sm text-muted-foreground">Create a new template to get started</p>
-                    <Button
-                      variant="outline"
-                      className="mt-2"
-                      onClick={() => {
-                        setEditingTemplate(null)
-                        setIsDialogOpen(true)
-                      }}
-                    >
-                      <Plus className="h-4 w-4 mr-2" />
-                      Create Template
-                    </Button>
+                    <h2 className="text-xl font-semibold">No Templates Found</h2>
+                    <p className="text-muted-foreground">Create a new template to get started.</p>
                   </div>
                 </CardContent>
               </Card>

@@ -113,8 +113,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Powered by [OpenAI](https://openai.com/) or local LLM alternatives
 \`\`\`
 
-Let's create a tailwind.config.js file:
-
 ```js file="tailwind.config.js"
 /** @type {import('tailwindcss').Config} */
 module.exports = {
