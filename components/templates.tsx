@@ -164,7 +164,7 @@ export function Templates() {
                       : setNewTemplate({ ...newTemplate, content: e.target.value })
                   }
                 />
-                <p className="text-xs text-muted-foreground">Use {{ contactName }} to insert the contact's name.</p>
+                <p className="text-xs text-muted-foreground">Use {"{{contactName}}"} to insert the contact's name.</p>
               </div>
             </div>
             <DialogFooter>
@@ -231,8 +231,19 @@ export function Templates() {
                 <CardContent className="p-6">
                   <div className="flex flex-col items-center justify-center py-8 gap-2">
                     <FileText className="h-10 w-10 text-muted-foreground" />
-                    <h2 className="text-xl font-semibold">No Templates Found</h2>
-                    <p className="text-muted-foreground">Create a new template to get started.</p>
+                    <h3 className="font-medium">No templates found</h3>
+                    <p className="text-sm text-muted-foreground">Create a new template to get started</p>
+                    <Button
+                      variant="outline"
+                      className="mt-2"
+                      onClick={() => {
+                        setEditingTemplate(null)
+                        setIsDialogOpen(true)
+                      }}
+                    >
+                      <Plus className="h-4 w-4 mr-2" />
+                      Create Template
+                    </Button>
                   </div>
                 </CardContent>
               </Card>
